@@ -1,0 +1,32 @@
+ MySqlDataAdapter ^ sda = gcnew MySqlDataAdapter(); 
+				 sda->SelectCommand = cmdDataBase;
+				 DataTable^ dbdataset = gcnew DataTable();
+				 sda->Fill(dbdataset);
+				 BindingSource ^bSource=gcnew BindingSource();
+				 bSource->DataSource = dbdataset;
+				 dataGridView1->DataSource=bSource;
+				 //dataGridView1->AutoResizeColumns(DataGridViewAutoSizeColumnsMode::AllCellsExceptHeader);
+				 sda->Update(dbdataset);
+
+
+
+
+
+
+//String^ r=listView1->GetItemAt(1,2)->Text;
+			 //textBox1->Text=r;
+			 //textBox1->Text=listView1->SelectedItems[0]->Text;
+			 //Form5^ f5=gcnew Form5(user,listView1->SelectedItems[0]->Text,listView1->SelectedItems[1]->Text);
+			 //f5->ShowDialog();
+
+			 //ListViewItem
+			 //if(listView1->SelectedItems->Count > 0)
+			 //{
+			//	 ListViewItem item = listView1->SelectedIndices;
+				 //textBox1->Text = item->SubItems[0]->Text;
+				 //EmpNametextBox.Text = item.SubItems[1].Text;
+			 //}
+			 
+			 //ListViewItem item = listView1->SelectedItems;
+			 //String ^ i1=item.Text;
+			 //String ^ i2=item.SubItems[1].Text;
